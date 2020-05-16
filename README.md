@@ -138,3 +138,4 @@ python manage.py createsuperuser
 ###### test django admin 
 
 http://localhost:8000/admin
+http://localhost:8000/api/hello-view  >get api view
