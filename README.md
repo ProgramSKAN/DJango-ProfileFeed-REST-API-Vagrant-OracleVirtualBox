@@ -102,3 +102,14 @@ install requirements.txt
 . > dot specifies location to create this project
 >(env) vagrant@ubuntu-bionic:/vagrant$ django-admin.py startproject profiles_project .
 >(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py startapp profiles_api
+
+# Test and commit changes
+
+start running development web server. 0.0.0.0>make it available in all networks that is on app development server.8000>start it in port 8000(which is specified in vagrantfile, we mapped prot 8000 for host machine to port 8000 for development machine.so 8000 is used here to start server)
+>python manage.py runserver 0.0.0.0:8000
+
+check in browser
+>http://localhost:8000/  or http://17.0.0.1:8000/
+
+to stop server
+>ctrl+c
