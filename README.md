@@ -130,3 +130,11 @@ to stop server
 
 > python manage.py makemigrations profiles_api
 > python manage.py migrate
+
+# create superuser
+
+python manage.py createsuperuser
+
+###### test django admin 
+
+http://localhost:8000/admin
