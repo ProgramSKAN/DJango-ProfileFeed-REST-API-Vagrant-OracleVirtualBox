@@ -73,3 +73,32 @@ vagrant@ubantu-bionic> cd /vagrant :: this will make everything in vagrant direc
 ex:if you run "touch test.txt" in vagrant@ubantu-bionic:/vagrant>   then it will create text file in project directory
 
 ex:if you run ls in vagrant@ubantu-bionic:/vagrant>   then it will match to project directory
+
+
+# every Commit
+
+> git add .
+> git commit -am "congifugured vagrant and setup hello world script"
+> git push origin
+
+# Create Python Virtual Environment
+https://docs.python-guide.org/dev/virtualenvs/
+
+create it in vagrant server home directory not in project directory, which helps in destroy and recreate vagrant server from scratch.at that time we can have a new environment.
+>python -m venv ~/env
+
+activate virtual environment
+>source ~/env/bin/activate
+
+to deactivate venv
+>deactivate
+
+https://pypi.org/search/?q=django&o=> Django latest version
+
+install requirements.txt
+>(env) vagrant@ubuntu-bionic:/vagrant$ pip install -r requirements.txt
+
+# Create new DJango Project & App
+. > dot specifies location to create this project
+>(env) vagrant@ubuntu-bionic:/vagrant$ django-admin.py startproject profiles_project .
+>(env) vagrant@ubuntu-bionic:/vagrant$ python manage.py startapp profiles_api
